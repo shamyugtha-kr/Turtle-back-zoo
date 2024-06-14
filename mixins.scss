@@ -1,0 +1,22 @@
+@import "color_font";
+@mixin bgimg{
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+@mixin btn-container{
+    font-family: $lato;
+    font-size: 14px;
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+}

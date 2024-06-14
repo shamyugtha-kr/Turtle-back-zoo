@@ -1,0 +1,310 @@
+@import "mixins";
+@import "color_font";
+
+body,h1,h2,h6,p,div,section,img,a,button,ul,li,.col-3,col{
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    color: $black;
+    font-family: $montserrat;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+}
+
+.home{
+    background-image: url("Rectangle 1.svg");
+    @include bgimg;
+    .zoo-alert{
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        p{
+            color: $white;
+            font-size: 16px;
+            font-weight: 500; 
+            letter-spacing: 2px;
+            padding-right: 20px;
+        }
+        .btn{
+            @include btn-container;
+            background-color: $white;
+            padding: 5px 10px;
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                font-family: $lato;
+                margin: 0;
+                color: $black;
+                letter-spacing: normal;
+                padding: 0px;
+            }
+            img{
+                padding-left: 5px;
+            }
+        }
+    }
+    header{
+        display: flex;
+        background-color: $white;
+        justify-content: center;
+        padding: 20px;
+        ul{
+            list-style: none;
+            display: flex;
+            font-size: 16px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            li{
+                padding: 0 15px;
+            }
+            
+        }
+        .search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                padding: 0 13px;
+            }
+            p{
+                @include btn-container;
+                padding: 10px 20px;
+                color: $white;
+                background-color: $black;
+            }
+            .ticket-btn{
+                background-color: $green;
+            }
+        }
+    }
+    .home-text{
+        h1{
+            color: $white;
+            font-size: 57px;
+            line-height: 70px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            width: 50%;
+            padding: 9% 10% 7% 10%;
+        }
+    }
+    .container{
+        .col-3{
+            padding: 0 15px;
+            .box{
+                background-color: $white;
+                border-radius: 28px;
+                box-shadow: 0px 4px 44px 0px #00000012;
+            }
+            .heading{
+                display: flex;
+                padding: 20px;
+                align-items: center;
+                h1{
+                    color:$black;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+                img{
+                    padding-right: 10px;
+                }
+            }
+            .details{
+                padding: 10px;
+                .line{
+                    display: flex;
+                    padding: 10px 10px 20px 10px;
+                    p{
+                        font-size: 13px;
+                        color: $grey;
+                        font-weight: 500;
+                        line-height: 18px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+            .link{
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                h1{
+                    font-size: 16px;
+                } 
+            }
+        }
+        
+    }
+    .events{
+        padding: 60px 0;
+        .backdrop{
+            background-color: $white;
+        
+        .cover{
+            width: fit-content;
+            margin: 0 auto;
+            .heading{
+                display: flex;
+                justify-content: space-between;
+                padding: 25px;
+                h1{
+                    font-size: 26px;
+                }
+                a{
+                    @include btn-container;
+                    border-radius: 19px;
+                    font-size: 16px;
+                    color: $white;
+                    padding: 6px 10px;
+                    background-color: $green;
+                }
+            }
+            .container{
+                .col-4{
+                    padding: 0 25px;
+                    .card{
+                        width: fit-content;
+                        border-radius: 8px;
+                        border: 1px solid $border-grey;
+                        height: 100%;
+                        .event-img{
+                            width: 100%;
+                        }
+                        .textbox{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 100%;
+                            max-width: 100%;
+                            padding: 20px;
+                            .datetime{
+                                display: flex;
+                                font-size: 14px;
+                                font-weight: 600;
+                                padding: 0 10px;
+                                .date{
+                                    color: $date-green;
+                                    padding-right: 10px;
+                                }
+                                .time{
+                                    display: flex;
+                                    p{
+                                        padding: 0 5px 0 10px;
+                                    }
+                                    img{
+                                        padding: 0 10px;
+                                    }
+                                }
+                            }
+                            .title{
+                                padding: 20px 40px 20px 10px;
+                                h2{
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .desc{
+                                padding: 10px 40px 10px 10px;
+                                font-size: 14px;
+                                color: $para-grey;
+                            }
+                            .link{
+                                display: flex;
+                                padding: 10px;
+                                justify-content: space-between;
+                                p{
+                                    font-family: $lato;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        }
+    }
+    .attractions{
+        background-image:  url("Mask group .svg");
+        @include bgimg;
+        background-size: contain;
+        min-height: 100%;
+        
+        .insite{
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 120px;
+
+        .same{
+            display: flex;
+        }
+        h1{
+            font-family: Montserrat;
+            padding-top: 20px;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0px;
+text-align: center;
+color: rgba(255, 255, 255, 0.53);
+
+            padding-right: 20px;
+        }
+            }
+            .insite img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+        .card{
+            padding-top: 50px;
+            background-color: transparent;
+            border: none;
+            h1{
+                font-family: Montserrat;
+font-size: 18px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0.01em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+background-color: transparent;
+padding-top: 10px;
+            }
+            p{
+                padding-top: 10px;
+                font-family: Montserrat;
+                font-size: 12px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0.02em;
+text-align: left;
+color: rgba(255, 255, 255, 1);
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+
+            }
+        }
+    }
+          
+}
+
+
+
+
+
